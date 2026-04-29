@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;500;700&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --font-dot: 'Press Start 2P', system-ui, sans-serif;
+  --font-display: 'Outfit', system-ui, sans-serif;
+  --font-clean: 'Space Grotesk', system-ui, sans-serif;
+  --color-tech-bg: #10141f;
+  --color-tech-card: #182033;
+  --color-tech-line: #3a4664;
+  --color-tech-text: #f7f9ff;
+  --color-tech-muted: #c1cbde;
+  --color-tech-accent: #89b2ff;
+  --color-tech-pink: #ff91fd;
+}
+
+body {
+  @apply m-0 min-h-screen bg-tech-bg text-tech-text antialiased;
+  background:
+    radial-gradient(circle at 92% 52%, rgba(255, 94, 131, 0.38), transparent 28%),
+    radial-gradient(circle at 24% -10%, rgba(137, 178, 255, 0.18), transparent 40%),
+    radial-gradient(circle at 85% -20%, rgba(255, 145, 253, 0.14), transparent 40%),
+    #0c0f19;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: auto, auto, auto, auto;
+}
+
+.after-events-zone {
+  position: relative;
+  margin-top: 1.8rem;
+  padding: 2rem 1rem 1rem;
+}
+
+.loader-fill {
+  animation: loading-bar 2.1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+@keyframes loading-bar {
+  0% {
+    width: 8%;
+    transform: translateX(0);
+  }
+  80% {
+    width: 88%;
+    transform: translateX(0);
+  }
+  100% {
+    width: 100%;
+    transform: translateX(0);
+  }
+}
+
+.member-float {
+  animation-name: member-float;
+  animation-timing-function: cubic-bezier(0.45, 0, 0.55, 1);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-fill-mode: both;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+@keyframes member-float {
+  0% {
+    transform: translate3d(0, 0, 0) rotate(-0.6deg);
+  }
+  100% {
+    transform: translate3d(0, -8px, 0) rotate(0.6deg);
+  }
+}
