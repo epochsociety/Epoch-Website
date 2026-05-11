@@ -102,14 +102,14 @@ function UpcomingEventSection() {
   }, [])
 
   return (
-    <section id="upcoming" ref={sectionRef} className="reveal-root mt-10">
+    <section id="upcoming" ref={sectionRef} className="reveal-root mt-10 overflow-x-hidden">
       <div className="relative overflow-hidden py-10">
         <div className="pointer-events-none absolute inset-x-0 top-3 z-0 overflow-hidden">
-          <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#0c0f19] to-transparent" />
-          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#0c0f19] to-transparent" />
-          <div ref={topTrackRef} className="flex w-max gap-16 whitespace-nowrap font-display text-7xl font-semibold text-white/15 md:text-8xl">
+          <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-tech-bg to-transparent" />
+          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-tech-bg to-transparent" />
+          <div ref={topTrackRef} className="flex w-max gap-16 whitespace-nowrap font-display text-7xl font-semibold text-tech-text/12 md:text-8xl">
             {Array.from({ length: 10 }).map((_, i) => (
-              <span key={`top-${i}`} className="text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.22)]">
+              <span key={`top-${i}`} className="text-transparent [-webkit-text-stroke:1px_rgba(17,17,17,0.18)]">
                 /21 /22 /23
               </span>
             ))}
@@ -117,9 +117,9 @@ function UpcomingEventSection() {
         </div>
 
         <div className="pointer-events-none absolute inset-x-0 bottom-2 z-0 overflow-hidden">
-          <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-[#0c0f19] to-transparent" />
-          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-[#0c0f19] to-transparent" />
-          <div ref={bottomTrackRef} className="flex w-max gap-16 whitespace-nowrap font-display text-7xl font-semibold text-white/12 md:text-8xl">
+          <div className="absolute inset-y-0 left-0 w-20 bg-gradient-to-r from-tech-bg to-transparent" />
+          <div className="absolute inset-y-0 right-0 w-20 bg-gradient-to-l from-tech-bg to-transparent" />
+          <div ref={bottomTrackRef} className="flex w-max gap-16 whitespace-nowrap font-display text-7xl font-semibold text-tech-text/10 md:text-8xl">
             {Array.from({ length: 10 }).map((_, i) => (
               <span key={`bottom-${i}`}>Partner Awards</span>
             ))}
@@ -128,10 +128,10 @@ function UpcomingEventSection() {
 
         <p className="reveal relative z-10 font-clean text-xs tracking-[0.24em] text-tech-muted">UPCOMING EVENT</p>
         <div className="pointer-events-none absolute left-[-4%] top-14 z-0 w-[120%] select-none">
-          <p className="font-display text-[70px] font-semibold leading-[0.9] text-white/90 md:text-[120px]">
+          <p className="font-display text-[70px] font-semibold leading-[0.9] text-tech-text/85 md:text-[120px]">
             Webflow Award
           </p>
-          <p className="mt-6 font-display text-[70px] font-semibold leading-[0.9] text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.24)] md:text-[120px]">
+          <p className="mt-6 font-display text-[70px] font-semibold leading-[0.9] text-transparent [-webkit-text-stroke:1px_rgba(17,17,17,0.22)] md:text-[120px]">
             Partner Award
           </p>
         </div>
@@ -145,7 +145,7 @@ function UpcomingEventSection() {
               href={upcomingEvent.url}
               target="_blank"
               rel="noreferrer"
-              className="mt-6 inline-flex rounded-full bg-white/10 px-4 py-2 font-clean text-sm hover:bg-white/15"
+              className="mt-6 inline-flex rounded-full border border-tech-line bg-tech-card/70 px-4 py-2 font-clean text-sm hover:text-tech-magenta"
             >
               Open event page
             </a>
@@ -154,7 +154,7 @@ function UpcomingEventSection() {
           <div className="reveal relative">
             <div
               ref={cardRef}
-              className="relative mx-auto aspect-[3/4] w-[min(390px,96%)] overflow-hidden rounded-[34px] bg-black/45 shadow-[0_30px_120px_rgba(0,0,0,0.55)] backdrop-blur"
+              className="relative mx-auto aspect-[3/4] w-[min(390px,96%)] overflow-hidden rounded-[34px] bg-tech-text/85 shadow-[0_30px_120px_rgba(17,17,17,0.35)] backdrop-blur"
             >
               <Suspense fallback={null}>
                 <HandsLayer3D />
@@ -162,13 +162,13 @@ function UpcomingEventSection() {
 
               <div
                 ref={eyeRef}
-                className="absolute left-1/2 top-1/2 h-44 w-[74%] -translate-x-1/2 -translate-y-1/2 rounded-[50%] bg-gradient-to-b from-white/10 to-white/0"
+                className="absolute left-1/2 top-1/2 h-44 w-[74%] -translate-x-1/2 -translate-y-1/2 rounded-[50%] bg-gradient-to-b from-tech-glow/25 to-white/0"
                 style={{ clipPath: 'ellipse(48% 36% at 50% 50%)' }}
               >
                 <div className="absolute inset-2 rounded-[50%] bg-gradient-to-b from-black/70 to-black/40" />
                 <div className="absolute left-1/2 top-1/2 h-14 w-14 -translate-x-1/2 -translate-y-1/2">
                   <div ref={dotRef} className="h-12 w-12">
-                    <div className="h-12 w-12 rounded-full bg-emerald-300/95 shadow-[0_0_70px_rgba(52,211,153,0.85)]" />
+                    <div className="h-12 w-12 rounded-full bg-tech-accent shadow-[0_0_80px_rgba(94,217,243,0.75)]" />
                   </div>
                 </div>
               </div>
@@ -179,7 +179,7 @@ function UpcomingEventSection() {
                 className="event-badge group pointer-events-auto absolute left-7 top-1/2 z-40 -translate-y-1/2 cursor-pointer transition-transform duration-300 hover:scale-105"
                 aria-label="Open upcoming event"
               >
-                <div className="event-badge-ring relative h-20 w-20 rounded-full bg-tech-pink/80 shadow-[0_18px_70px_rgba(255,145,253,0.40)]">
+                <div className="event-badge-ring relative h-20 w-20 rounded-full bg-tech-pink/80 shadow-[0_18px_70px_rgba(232,90,207,0.38)]">
                   <svg className="absolute inset-0 h-full w-full" viewBox="0 0 100 100">
                     <defs>
                       <path id="badgeTextCircle" d="M 50, 50 m -34, 0 a 34,34 0 1,1 68,0 a 34,34 0 1,1 -68,0" />
@@ -188,7 +188,7 @@ function UpcomingEventSection() {
                       <textPath href="#badgeTextCircle">OPEN NEXT EVENT OPEN NEXT EVENT</textPath>
                     </text>
                   </svg>
-                  <div className="absolute inset-[14px] rounded-full bg-black/60" />
+                  <div className="absolute inset-[14px] rounded-full bg-tech-text/70" />
                   <div className="absolute inset-0 grid place-items-center">
                     <span className="rounded-full bg-white/10 px-3 py-1 font-clean text-xs text-white group-hover:bg-white/15">↗</span>
                   </div>

@@ -7,17 +7,22 @@ export function useGsapEffects(scopeRef) {
     gsap.registerPlugin(ScrollTrigger)
 
     const ctx = gsap.context(() => {
-      gsap.from('.reveal', {
-        y: 45,
-        opacity: 0,
-        duration: 0.9,
-        stagger: 0.12,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.reveal-root',
-          start: 'top 80%',
+      gsap.fromTo(
+        '.reveal',
+        { y: 42, opacity: 0, filter: 'blur(12px)' },
+        {
+          y: 0,
+          opacity: 1,
+          filter: 'blur(0px)',
+          duration: 1.05,
+          stagger: 0.1,
+          ease: 'power3.out',
+          scrollTrigger: {
+            trigger: '.reveal-root',
+            start: 'top 82%',
+          },
         },
-      })
+      )
 
       gsap.utils.toArray('.tilt-3d').forEach((card) => {
         gsap.fromTo(
