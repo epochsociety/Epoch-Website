@@ -1,16 +1,18 @@
-<<<<<<< HEAD
 # Epoch-Website
-=======
-# demo_epoch-website
 
-Refokus-inspired college tech club website built with React, Vite, Tailwind, GSAP, and React Three Fiber.
+College tech club website built with **React**, **Vite**, **Tailwind CSS**, **GSAP**, **Framer Motion**, **Swiper**, and **React Three Fiber**.
 
 ## Run locally
 
-- `npm install`
-- `npm run dev`
+```bash
+npm install
+npm run dev
+```
 
 ## Build
 
-- `npm run build`
->>>>>>> vercel-source
+```bash
+npm run build
+```
+
+Static assets use the `base` path in `vite.config.js` (GitHub Pages).
