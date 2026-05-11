@@ -1,0 +1,5 @@
+# Root: app lives in Epoch-Website/; ignore stray installs here
+node_modules/
+dist/
+.env
+.env.*
